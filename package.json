@@ -24,6 +24,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
+    "json-server": "node json-server/index.js",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
