@@ -14,12 +14,13 @@ module.exports = {
     },
   ],
   typescript: {
-    enableTypeChecking: true, /* (default value)  */
+    enableTypeChecking: true /* (default value)  */,
   },
   webpack: {
     // 절대경로 지정
     alias: {
       '~api': path.resolve(__dirname, 'src/api'),
+      '~assets': path.resolve(__dirname, 'src/assets'),
       '~components': path.resolve(__dirname, 'src/components'),
       '~constants': path.resolve(__dirname, 'src/constants'),
       '~hooks': path.resolve(__dirname, 'src/hooks'),
@@ -32,6 +33,7 @@ module.exports = {
     configure: {
       moduleNameMapper: {
         '^\\~api/(.*)$': '<rootDir>/src/api/$1',
+        '^\\~assets/(.*)$': '<rootDir>/src/assets/$1',
         '^\\~components/(.*)$': '<rootDir>/src/components/$1',
         '^\\~constants/(.*)$': '<rootDir>/src/constants/$1',
         '^\\~hooks/(.*)$': '<rootDir>/src/hooks/$1',
