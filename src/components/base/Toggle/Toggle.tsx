@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import { COLORS } from '~constants/index';
 
 interface ToggleProps {
   onClick: React.MouseEventHandler;
@@ -29,7 +30,8 @@ const Track = styled.div<{ active: boolean }>`
   width: 34px;
   height: 14px;
   border-radius: 34px;
-  background: ${(props) => (props.active ? '#BBDEFB' : '#c2c2c2')};
+  background: ${(props) =>
+    props.active ? `${COLORS.blue_50}` : `${COLORS.border}`};
 `;
 
 const Knob = styled.div<{ active: boolean }>`
@@ -44,11 +46,11 @@ const Knob = styled.div<{ active: boolean }>`
     props.active
       ? css`
           right: -4px;
-          background: #2196f3;
+          background: ${COLORS.blue};
         `
       : css`
           right: 17px;
-          background: #f5f5f5;
+          background: ${COLORS.background_white};
         `}
 `;
 

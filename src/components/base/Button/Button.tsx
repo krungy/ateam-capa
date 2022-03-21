@@ -1,5 +1,6 @@
 import { ReactChild } from 'react';
 import styled from 'styled-components';
+import { COLORS } from '~constants/index';
 
 interface ButtonProps {
   children: ReactChild;
@@ -16,14 +17,14 @@ const Button = ({
   const buttonStyle: React.CSSProperties =
     type === 'primary'
       ? {
-          backgroundColor: '#2196F3',
-          color: '#FFFFFF',
+          backgroundColor: `${COLORS.blue}`,
+          color: `${COLORS.white}`,
         }
       : type === 'secondary'
       ? {
-          backgroundColor: '#FFFFFF',
-          color: '#2196F3',
-          border: '1px solid #2196F3',
+          backgroundColor: `${COLORS.white}`,
+          color: `${COLORS.blue}`,
+          border: `1px solid ${COLORS.blue}`,
           boxSizing: 'border-box',
         }
       : {
@@ -33,7 +34,7 @@ const Button = ({
           fontSize: '12px',
           lineHeight: 1.67,
           gap: '12px',
-          color: '#2196f3',
+          color: `${COLORS.blue}`,
           marginLeft: '16px',
         };
 

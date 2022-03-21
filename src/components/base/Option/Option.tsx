@@ -1,6 +1,7 @@
 import { CheckIcon } from '~components/base/Icon/Icon';
 import styled, { css } from 'styled-components';
 import type { OptionType } from '~types/index';
+import { COLORS } from '~constants/index';
 
 interface OptionProps {
   options: OptionType[];
@@ -39,8 +40,8 @@ const Wrapper = styled.div`
   gap: 10px;
   width: 130px;
   padding: 17px 12px;
-  background: #fff;
-  border: 1px solid #939fa5;
+  background: ${COLORS.white};
+  border: 1px solid ${COLORS.text_grey};
   border-radius: 4px;
   cursor: pointer;
   z-index: 1000;
@@ -49,7 +50,7 @@ const Wrapper = styled.div`
 const OptionList = styled.div`
   display: flex;
   align-items: center;
-  background: #fff;
+  background: ${COLORS.white};
 `;
 
 const Label = styled.label`
@@ -82,11 +83,11 @@ const StyledCheckbox = styled.div<{ checked: boolean }>`
   ${(props) =>
     props.checked
       ? css`
-          background: #2196f3;
+          background: ${COLORS.blue};
         `
       : css`
-          background: #fff;
-          border: 2px solid #939fa5;
+          background: ${COLORS.white};
+          border: 2px solid ${COLORS.text_grey};
         `}
   transition: all 0.5s;
   cursor: pointer;
