@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import styled, { css } from 'styled-components';
 import type { OptionType } from '~types/types';
 import { Option, ArrowIcon } from '~components/base';
+import { COLORS } from '~constants/index';
 interface SelectProps {
   title: string;
   options: OptionType[];
@@ -58,17 +59,17 @@ const Wrapper = styled.div<{ checked: boolean }>`
   display: flex;
   align-items: center;
   padding: 2px 10px;
-  border: 1px solid #939fa5;
+  border: 1px solid ${COLORS.text_grey};
   border-radius: 4px;
   &:hover {
-    border: 1px solid #2196f3;
+    border: 1px solid ${COLORS.blue};
   }
   ${(props) =>
     props.checked &&
     css`
-      background-color: #1565c0;
+      background-color: ${COLORS.blue_checked};
       span {
-        color: #fff !important;
+        color: ${COLORS.white} !important;
       }
     `}
 `;
@@ -82,7 +83,7 @@ const SelectTitle = styled.span`
   font-weight: 500;
   font-size: 12px;
   line-height: 24px;
-  color: #323d45;
+  color: ${COLORS.text_default};
 `;
 
 export default Select;

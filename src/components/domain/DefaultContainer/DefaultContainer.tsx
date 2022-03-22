@@ -9,7 +9,7 @@ const DefaultContainer = () => {
 const Container = styled.div`
   padding: 40px 0;
   width: 100%;
-  color: #939fa5;
+  color: ${COLORS.text_grey};
   font-weight: 400;
   text-align: center;
   word-break: keep-all;

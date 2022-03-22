@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import styled, { css } from 'styled-components';
 import { CheckIcon } from './Icon';
+import { COLORS } from '~constants/index';
 
 export default {
   title: 'base/Icon',
@@ -31,11 +32,11 @@ const StyledCheckbox = styled.div<{ checked: boolean }>`
   ${(props) =>
     props.checked
       ? css`
-          background: #2196f3;
+          background: ${COLORS.blue};
         `
       : css`
-          background: #fff;
-          border: 2px solid #939fa5;
+          background: ${COLORS.white};
+          border: 2px solid ${COLORS.text_grey};
         `}
   transition: all 0.5s;
   cursor: pointer;

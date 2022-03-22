@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Option from './Option';
 import type { OptionType } from '~types/index';
 import { useState } from 'react';
-import { MATERIAL_OPTIONS } from '~constants/option';
+import { MATERIAL_OPTIONS } from '~constants/index';
 
 export default {
   title: 'base/Option',

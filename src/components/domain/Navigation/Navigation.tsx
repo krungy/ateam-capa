@@ -157,7 +157,7 @@ const PCMenu = styled.div`
     font-size: 1rem;
     font-family: 'Noto Sans KR';
     font-weight: 500;
-    color: #fff;
+    color: ${COLORS.white};
 
     svg {
       position: relative;
@@ -187,7 +187,7 @@ const Backdrop = styled.div<SliderProps>`
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #323d45;
+    background-color: ${COLORS.text_default};
     opacity: 0.5;
   }
 `;
@@ -208,7 +208,7 @@ const Slider = styled.div<SliderProps>`
     width: 280px;
     height: 100vh;
     display: block;
-    background-color: #fff;
+    background-color: ${COLORS.white};
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
     transition: transform 0.5s;
     transform: translateX(${({ isShowing }) => (isShowing ? 0 : -280)}px);

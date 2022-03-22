@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Select from './Select';
-import { METHOD_OPTIONS, MATERIAL_OPTIONS } from '~constants/option';
+import { METHOD_OPTIONS, MATERIAL_OPTIONS } from '~constants/index';
 
 export default {
   title: 'domain/Select',
