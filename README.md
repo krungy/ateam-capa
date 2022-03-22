@@ -1,46 +1,101 @@
-# Getting Started with Create React App
+<h1>원티드 프리온보딩 코스 2주차 기업과제<br />
+파트너스 대시보드 📈</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 배포
 
-## Available Scripts
+🔗 **배포**():  <br>
 
-In the project directory, you can run:
+## 🪄 프로젝트 실행 방법
 
-### `yarn start`
+1. git clone하여 프로젝트를 내려받습니다.
+   ```bash
+   git clone 
+   ```
+2. 아래 커맨드로 패키지를 설치합니다.
+   ```bash
+   yarn install
+   ```
+3. 프로젝트 root 폴더에 `.env` 파일을 생성하고 아래 내용을 작성합니다.
+   ```bash
+   REACT_APP_API_URL=http://localhost:3001
+   ```
+4. 아래 커맨드로 json-server를 구동합니다.
+   ```bash
+   yarn json-server
+   ```
+5. 아래 커맨드로 프로젝트를 실행합니다.
+   ```bash
+   yarn start
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🧰 기술 스택 및 구현 사항
 
-### `yarn test`
+![](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white) ![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![](https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=Storybook&logoColor=white)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📚 전체 구현사항
 
-### `yarn build`
+- 고객의 선택에 맞는 요청서를 보여주는 페이지를 구현합니다.
+- 팀 프로젝트로 구현했던 과제를 조금 수정하여 다시 구성해보았습니다.
+  - 두 개의 Button 컴포넌트(Button, ResetButton)를 확장성 고려하여 하나의 컴포넌트로 압축시켰습니다.
+  - 색상을 가능한 모듈화하여 한번에 관리하게 수정했습니다.
+  - 옵션에 사용된 리스트를 constant로 관리하였습니다.
+  - 기존 Select 컴포넌트를 최소한의 기능 단위로 쪼개어 나누었습니다. (Icon, Option, Select)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 요구사항
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 견적 요청 카드
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [x] : API 데이터를 받아와서 데이터를 통해 화면에 렌더링
+  - [x] : 프로젝트명, 요청한 고객사, 고객의 희망 납기일, 요청한 제품 총 수량
+  - [x] : 가공방식은 타입 지정을 통해 선택
+- [x] : 요청 내역 버튼, 채팅하기 버튼
+- [x] : 카드 전체 영역에 hover 시에 보더 스타일
 
-### `yarn eject`
+#### 필터링
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [x] : 가공 방식 필터가 선택되면, 해당 방식 조건이 포함된 카드를 모두 노출
+- [x] : 재료 필터가 선택되면, 해당 재료 조건이 포함된 카드를 모두 노출
+- [x] : 가공 방식과 재료 필터가 둘 다 선택되면, 두 조건의 교집합 노출
+- [x] : 선택 박스 hover 시 보더 스타일
+- [x] : 선택 박스 hover 시 option 목록 노출
+- [x] : option 선택 시 선택 박스와 옵션의 체크박스 스타일 변경 및 개수 표시
+- [x] : 필터링 리셋 버튼 클릭 시 필터 초기화
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### 토글
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [x] : 클릭 시 스타일 변경 및 활성화 표시
+- [x] : 토글 활성화 시 상담중인 카드만 노출
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### 빈화면
 
-## Learn More
+- [x] : 조건에 맞는 카드가 없을 시 기본 화면 노출
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 모바일
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [x] : 반응형 Navbar
+- [x] : 햄버거 버튼 클릭 시 메뉴 화면 노출
+
+## 📂 디렉토리 구조
+
+```bash
+.
+├── api
+├── assets
+│   └── images
+├── components
+│   ├── base
+│   │   ├── Button
+│   │   ├── Icon
+│   │   ├── Option
+│   │   ├── Toggle
+│   └── domain
+│       ├── DefaultContainer
+│       ├── ItemCard
+│       ├── Navigation
+│       └── Select
+├── constants
+├── styles
+└── types
+```
