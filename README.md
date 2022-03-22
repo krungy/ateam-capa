@@ -1,9 +1,8 @@
-<h1>원티드 프리온보딩 코스 2주차 기업과제<br />
-파트너스 대시보드 📈</h1>
+<h1>ATEAM-CAPA</h1>
 
 ## 🚀 배포
 
-🔗 **배포**():  <br>
+🔗 **배포**(heroku): https://ateam-capa.herokuapp.com/ <br>
 
 ## 🪄 프로젝트 실행 방법
 
