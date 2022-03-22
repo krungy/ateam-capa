@@ -22,13 +22,13 @@
   },
   "scripts": {
     "start": "node json-server/index.js",
-    "start:dev": "craco start",
-    "build": "craco build",
+    "start:dev": "cross-env NODE_PATH=src craco start",
+    "build": "cross-env NODE_PATH=src craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "heroku-postbuild": "craco build"
+    "heroku-postbuild": "cross-env NODE_PATH=src craco build"
   },
   "eslintConfig": {
     "extends": [
