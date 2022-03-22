@@ -21,13 +21,14 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "node json-server/index.js",
+    "start:dev": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "json-server": "node json-server/index.js",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "heroku-postbuild": "craco build"
   },
   "eslintConfig": {
     "extends": [
