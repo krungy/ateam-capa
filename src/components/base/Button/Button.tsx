@@ -6,12 +6,14 @@ interface ButtonProps {
   children: ReactChild;
   type: 'primary' | 'secondary' | 'borderless';
   imageSrc?: string;
+  onClick?: React.MouseEventHandler;
 }
 
 const Button = ({
   children,
   type = 'primary',
   imageSrc,
+  onClick,
   ...props
 }: ButtonProps) => {
   const buttonStyle: React.CSSProperties =
@@ -39,7 +41,12 @@ const Button = ({
         };
 
   return (
-    <ButtonContainer type="button" style={{ ...buttonStyle }} {...props}>
+    <ButtonContainer
+      type="button"
+      onClick={onClick}
+      style={{ ...buttonStyle }}
+      {...props}
+    >
       {imageSrc && <ImageContainer src={imageSrc} alt="buttonImage" />}
       {children}
     </ButtonContainer>
