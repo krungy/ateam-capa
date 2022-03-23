@@ -20,11 +20,11 @@
    ```
 4. 아래 커맨드로 json-server를 구동합니다.
    ```bash
-   yarn json-server
+   yarn start
    ```
 5. 아래 커맨드로 프로젝트를 실행합니다.
    ```bash
-   yarn start
+   yarn start:dev
    ```
 
 <br>
